@@ -1,0 +1,53 @@
+
+
+.imageCarousel {
+	position: relative;	
+	height: 400px;
+	width: 600px;
+	overflow: contain;
+	border: 2px solid white;
+	margin: 40px auto;
+	border-radius: 10px;
+	margin-bottom: 0;
+
+	.left, .right {
+		background: lightgray;
+		opacity: 0.1;
+		position: absolute;
+		height: 400px;
+		width: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 26px;
+		font-weight: 1000;
+	}
+
+	.left {
+		left: 0;
+	}
+
+	.right {
+		right: 0;
+	}
+
+	.left:hover, .right:hover {
+		cursor: pointer;
+		opacity: 0.13;
+	}
+}
+
+.number {	
+	button {
+		margin: 15px 5px;
+		width: 10px;
+		height: 10px;
+		border-radius: 100px;
+		border: none;
+		outline: none;
+		background: white;
+	}
+	button.selected {
+		background: black;
+	}
+}
