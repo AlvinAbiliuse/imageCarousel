@@ -6,15 +6,17 @@ const imageTimeout = (i, num) => {
 	let img = document.querySelector(".imageCarousel img")
 	img.setAttribute("src", i[n]);
 	setTimeout(() => {
-		if (n < i.length) {
+		if (n < i.length-1) {
 			n++;
 			imageTimeout(i, n);
+		} else {
+			imageTimeout(i, 0);
 		}
-	}, 10000);
+	}, 1000);
 };
 
 export function carousel(images) {
-	imageTimeout(images, 0);
+		imageTimeout(images, 0);
 };
 
 

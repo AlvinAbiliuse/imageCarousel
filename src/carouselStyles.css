@@ -4,12 +4,13 @@
 	position: relative;	
 	overflow: hidden;
 	width: 660px;
+	height: 400px;
 	margin: 40px auto;
 	border-radius: 10px;
 	margin-bottom: 0;
 	
 	img {
-		object-fit: contain;
+		object-fit: cover;
 		width: 600px;
 		height: 400px;
 	}
