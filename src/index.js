@@ -1,10 +1,6 @@
-import "./styles.css";
-import "./dropdownStyles.css";
-import "./carouselStyles.css";
-
 
 import { dropdown } from "./dropdown.js";
-import { cat, dog } from "./images.js";
+import { cat, dog } from "./exports.js";
 import { carousel } from "./carousel.js";
 console.log("hello world");
 
