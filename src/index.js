@@ -1,6 +1,6 @@
 import "./styles.css";
 import "./dropdownStyles.css";
-// import "./carouselStyles.css";
+import "./carouselStyles.css";
 
 
 import { dropdown } from "./dropdown.js";
