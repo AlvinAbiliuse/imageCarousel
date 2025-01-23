@@ -1,0 +1,31 @@
+button:hover {
+  cursor: pointer;
+}
+
+.dropDown {
+  width: 200px;
+  margin: 0 auto;
+  ul {
+    display: none;
+  }
+  li {
+    list-style: none;
+  }
+  button {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 0;
+  }
+  .dropDownButton {
+    background: black;
+    font-size: 1.1em;
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.show {
+  display: absolute;
+}
+
