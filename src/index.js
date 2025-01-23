@@ -7,3 +7,4 @@ for (let i in cat) {
 };
 
 dropdown();
+carousel(cat[1]);

@@ -2,19 +2,23 @@
 
 .imageCarousel {
 	position: relative;	
-	height: 400px;
-	width: 600px;
-	overflow: contain;
-	border: 2px solid white;
+	overflow: hidden;
+	width: 660px;
 	margin: 40px auto;
 	border-radius: 10px;
 	margin-bottom: 0;
-
+	
+	img {
+		object-fit: contain;
+		width: 600px;
+		height: 400px;
+	}
 	.left, .right {
 		background: lightgray;
 		opacity: 0.1;
 		position: absolute;
-		height: 400px;
+		top: 0;
+		height: 100%;;
 		width: 30px;
 		display: flex;
 		justify-content: center;
@@ -40,14 +44,20 @@
 .number {	
 	button {
 		margin: 15px 5px;
-		width: 10px;
-		height: 10px;
+		width: 15px;
+		height: 15px;
 		border-radius: 100px;
 		border: none;
 		outline: none;
 		background: white;
 	}
+	button:hover {
+		outline: 1px solid black;
+	}
 	button.selected {
 		background: black;
+	}
+	button.selecter:hover {
+		outline: 1px solid white;
 	}
 }
