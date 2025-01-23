@@ -10,9 +10,15 @@ button:hover {
 		position: absolute;
 		transition: transform 0.2s ease;
 		transform-origin: top;
+		z-index: 1;
 	}
 	ul.show {
 		transform: scale(1, 1);;
+	}
+	ul button {
+		background: white;
+		border: 1px solid lightgray;
+		border-top-color: gray;
 	}
   li {
     list-style: none;
