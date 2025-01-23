@@ -5,11 +5,9 @@ button:hover {
 .dropDown {
   width: 200px;
   margin: 0 auto;
-  ul {
-    display: none;
-  }
   li {
     list-style: none;
+		width: 200px;
   }
   button {
     width: 100%;
@@ -25,7 +23,14 @@ button:hover {
   }
 }
 
-.show {
-  display: absolute;
+ul {
+	transform: scale(1, 0);
+	position: absolute;
+	transition: transform 0.2s ease;
+	transform-origin: top;
+}
+
+ul.show {
+	transform: scale(1, 1);;
 }
 
