@@ -27,7 +27,7 @@ button:hover {
 	width: 200px;
 	margin: 0 auto;
 	ul {
-		display: absolute;
+		display: none;
 	}
 	li {
 		list-style: none;
@@ -46,7 +46,7 @@ button:hover {
 	}
 }
 
-.hidden {
-	display: none;
+.show {
+	display: absolute;
 }
 
