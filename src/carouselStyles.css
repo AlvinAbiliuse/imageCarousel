@@ -1,7 +1,7 @@
 .imageCarousel {
   position: relative;
   overflow: hidden;
-  width: 660px;
+  width: 600px;
   height: 400px;
   margin: 40px auto;
   border-radius: 10px;
@@ -12,19 +12,22 @@
     width: 600px;
     height: 400px;
   }
+
   .left,
   .right {
-    background: lightgray;
-    opacity: 0.1;
+		user-select: none;
+    background: none;
     position: absolute;
-    top: 0;
-    height: 100%;
-    width: 30px;
+    top: calc(50% - 30px);
+		padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 1000;
+		color: white;
+		border-radius: 10px;
+		text-shadow: 0 0 10px gray;
   }
 
   .left {
@@ -38,7 +41,8 @@
   .left:hover,
   .right:hover {
     cursor: pointer;
-    opacity: 0.3;
+		background: rgb(0 0 0 / 20%);
+		text-shadow: none;
   }
 }
 
