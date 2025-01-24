@@ -1,64 +1,64 @@
-
-
 .imageCarousel {
-	position: relative;	
-	overflow: hidden;
-	width: 660px;
-	height: 400px;
-	margin: 40px auto;
-	border-radius: 10px;
-	margin-bottom: 0;
-	
-	img {
-		object-fit: cover;
-		width: 600px;
-		height: 400px;
-	}
-	.left, .right {
-		background: lightgray;
-		opacity: 0.1;
-		position: absolute;
-		top: 0;
-		height: 100%;;
-		width: 30px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 26px;
-		font-weight: 1000;
-	}
+  position: relative;
+  overflow: hidden;
+  width: 660px;
+  height: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+  margin-bottom: 0;
 
-	.left {
-		left: 0;
-	}
+  img {
+    object-fit: cover;
+    width: 600px;
+    height: 400px;
+  }
+  .left,
+  .right {
+    background: lightgray;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 1000;
+  }
 
-	.right {
-		right: 0;
-	}
+  .left {
+    left: 0;
+  }
 
-	.left:hover, .right:hover {
-		cursor: pointer;
-		opacity: 0.2;
-	}
+  .right {
+    right: 0;
+  }
+
+  .left:hover,
+  .right:hover {
+    cursor: pointer;
+    opacity: 0.2;
+  }
 }
 
-.number {	
-	button {
-		margin: 15px 5px;
-		width: 10px;
-		height: 10px;
-		border-radius: 100px;
-		border: none;
-		outline: none;
-		background: white;
-	}
-	button:hover {
-		outline: 1px solid black;
-	}
-	button.selected {
-		background: gray;
-	}
-	button.selecter:hover {
-		outline: 1px solid white;
-	}
+.number {
+  button {
+    margin: 15px 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background: white;
+  }
+  button:hover {
+    outline: 1px solid black;
+  }
+  button.selected {
+    background: gray;
+  }
+  button.selecter:hover {
+    outline: 1px solid white;
+  }
 }

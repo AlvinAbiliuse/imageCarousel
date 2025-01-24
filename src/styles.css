@@ -1,24 +1,21 @@
-
-
 * {
-	padding: 0;
-	margin: 0;
-	line-height: 1.2em;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2em;
+  box-sizing: border-box;
 }
 
-
 body {
-	background: #43484d;
-	font-family: sans-serif;
+  background: #43484d;
+  font-family: sans-serif;
 }
 
 .mainContainer {
-	width: 70%;
-	margin: 50px auto;
-	text-align: center;
+  width: 70%;
+  margin: 50px auto;
+  text-align: center;
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }

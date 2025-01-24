@@ -5,25 +5,25 @@ button:hover {
 .dropDown {
   width: 200px;
   margin: 0 auto;
-	ul {
-		transform: scale(1, 0);
-		position: absolute;
-		transition: transform 0.2s ease;
-		transform-origin: top;
-		z-index: 1;
-	}
-	ul.show {
-		transform: scale(1, 1);;
-	}
-	ul button {
-		font-size: inherit;
-		background: lightgray;
-		border: 1px solid lightgray;
-		border-top-color: gray;
-	}
+  ul {
+    transform: scale(1, 0);
+    position: absolute;
+    transition: transform 0.2s ease;
+    transform-origin: top;
+    z-index: 1;
+  }
+  ul.show {
+    transform: scale(1, 1);
+  }
+  ul button {
+    font-size: inherit;
+    background: lightgray;
+    border: 1px solid lightgray;
+    border-top-color: gray;
+  }
   li {
     list-style: none;
-		width: 200px;
+    width: 200px;
   }
   button {
     width: 100%;
@@ -35,9 +35,7 @@ button:hover {
     background: gray;
     font-size: 1.1em;
     color: white;
-		border: none;
+    border: none;
     border-radius: 10px 10px 0 0;
   }
 }
-
-
