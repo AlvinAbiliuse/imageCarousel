@@ -2,7 +2,6 @@ import { cat, dog } from "./exports.js";
 const numbers = document.querySelector(".number");
 
 let n = 0;
-let images;
 let interval;
 
 let data = { Cats: cat, Dogs: dog };
@@ -59,9 +58,7 @@ const imageTimeout = (i) => {
     if (j == n) {
       numbers.querySelectorAll("button")[j].classList.add("selected");
     } else {
-      try {
         numbers.querySelectorAll("button")[j].classList.remove("selected");
-      } catch (e) {}
     }
   }
   if (n == 5) {
