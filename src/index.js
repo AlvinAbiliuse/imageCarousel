@@ -7,4 +7,4 @@ for (let i in cat) {
 };
 
 dropdown();
-carousel(cat);
+carousel(dog);
