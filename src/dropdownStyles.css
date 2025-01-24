@@ -16,7 +16,8 @@ button:hover {
 		transform: scale(1, 1);;
 	}
 	ul button {
-		background: white;
+		font-size: inherit;
+		background: lightgray;
 		border: 1px solid lightgray;
 		border-top-color: gray;
 	}
@@ -31,9 +32,10 @@ button:hover {
     border-radius: 0;
   }
   .dropDownButton {
-    background: black;
+    background: gray;
     font-size: 1.1em;
     color: white;
+		border: none;
     border-radius: 10px 10px 0 0;
   }
 }
