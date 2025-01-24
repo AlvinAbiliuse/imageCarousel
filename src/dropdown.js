@@ -7,7 +7,7 @@ function toggle() {
 export function dropdown() {
   let dropDownBtn = document.querySelector(".dropDownButton");
   dropDownBtn.addEventListener("click", toggle);
-  dropDownBtn.addEventListener("focusout", () => {
+  document.querySelector(".dropDownItems").addEventListener("focusout", () => {
     path.classList.remove("show");
   });
 }
