@@ -9,11 +9,5 @@ for (let i in cat) {
 let data = {"Cats": cat, "Dogs": dog};
 
 dropdown();
-carousel(data.Dogs);
+carousel();
 
-document.querySelector(".dropDownItems").addEventListener(
-	"click", (e) => {
-	if (e.target.nodeName == "BUTTON") {
-		carousel(data[e.target.textContent]);
-	}
-});

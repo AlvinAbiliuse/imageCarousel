@@ -1,10 +1,12 @@
-
+import { cat, dog } from "./exports.js";
 const numbers = document.querySelector(".number");
 
 let n = 0;
 let images;
 let interval;
 
+let data = {"Cats": cat, "Dogs": dog};
+let current = data["Cats"];
 
 function start(img) {
 	interval = setInterval(() => {
@@ -12,28 +14,42 @@ function start(img) {
 	}, 5000);
 };
 
+document.querySelector(".dropDownItems").addEventListener(
+  "click", (e) => {
+  if (e.target.nodeName == "BUTTON") {
+		n = 0;
+		current = data[e.target.textContent];
+    clearInterval(interval);
+		imageTimeout(current);
+		start(current);;
+  }
+});
+
+
 
 numbers.addEventListener("click", (e) => {
 	if (e.target.nodeName == "BUTTON") {
 		n = Number(e.target.classList[0].replace("img", "")) - 1;
 		clearInterval(interval);
-		imageTimeout(images);
-		start(images);
+		imageTimeout(current);
+		start(current);
 	}
 });
 
 document.querySelector(".left").addEventListener("click", 
 		() => {
 		console.log(n);
-		if (n < 1) {
-			console.log("heyo");
+		
+		if (n == 0) {
+			n = 4;
+		} else if (n < 2) {
 			n = 5;
 		} else {
 			n = n - 2;
 		};
 		clearInterval(interval);
-		imageTimeout(images);
-		start(images);
+		imageTimeout(current);
+		start(current);
 });
 
 document.querySelector(".right").addEventListener("click", 
@@ -44,11 +60,11 @@ document.querySelector(".right").addEventListener("click",
 			n = n++;
 		};
 		clearInterval(interval);
-		imageTimeout(images);
-		start(images);
+		imageTimeout(current);
+		start(current);
 });
 
-const imageTimeout = (i, num) => {
+const imageTimeout = (i) => {
 	let img = document.querySelector(".imageCarousel img")
 	img.setAttribute("src", i[n]);
 	for (let j=0; j < 6; j++) {
@@ -62,34 +78,18 @@ const imageTimeout = (i, num) => {
 			}
 		}
 	};
+	console.log(n);
 	if (n == 5) {
 		n = 0;
 	} else {
 		n++;
 	};
-/*
-	setTimeout(() => {
-		if (n < i.length-1) {
-			n++;
-			imageTimeout(i, n);
-		} else {
-			n = 0;
-			imageTimeout(i, 0);
-		}
-	}, 5000);
-*/
+	console.log(n + "\n\n");
 };
 
-export function carousel(img) {
-		images = img;
-		imageTimeout(img, 0);
-		start(images);
+export function carousel() {
+		imageTimeout(current);
+		start(current);
 };
 
-
-function displayButton() {
-	for (let i in numbers) {
-		console.log(numbers[i].className.replace("img", ""));
-	}
-};	
 
