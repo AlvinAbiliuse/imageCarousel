@@ -1,4 +1,4 @@
-let path = document.querySelector(".dropDown ul");
+let path = document.querySelector(".dropDown dropDownItems");
 
 function toggle() {
 	path.classList.toggle("show");
