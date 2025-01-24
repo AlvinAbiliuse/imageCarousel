@@ -14,20 +14,23 @@ function start(img) {
 
 
 numbers.addEventListener("click", (e) => {
-	n = Number(e.target.classList[0].replace("img", "")) - 1;
-	clearInterval(interval);
-	imageTimeout(images);
-	start(images);
+	if (e.target.nodeName == "BUTTON") {
+		n = Number(e.target.classList[0].replace("img", "")) - 1;
+		clearInterval(interval);
+		imageTimeout(images);
+		start(images);
+	}
 });
 
 document.querySelector(".left").addEventListener("click", 
 		() => {
-		if (n < 2) {
+		console.log(n);
+		if (n < 1) {
+			console.log("heyo");
 			n = 5;
-		} else if (n > 2) {
+		} else {
 			n = n - 2;
 		};
-		console.log(n);
 		clearInterval(interval);
 		imageTimeout(images);
 		start(images);
@@ -40,7 +43,6 @@ document.querySelector(".right").addEventListener("click",
 		} else {
 			n = n++;
 		};
-		console.log(n);
 		clearInterval(interval);
 		imageTimeout(images);
 		start(images);
@@ -49,7 +51,6 @@ document.querySelector(".right").addEventListener("click",
 const imageTimeout = (i, num) => {
 	let img = document.querySelector(".imageCarousel img")
 	img.setAttribute("src", i[n]);
-	console.log(n);
 	for (let j=0; j < 6; j++) {
 		if (j == n) {
 			numbers.querySelectorAll("button")[j].classList.add("selected");
