@@ -58,7 +58,7 @@ const imageTimeout = (i) => {
     if (j == n) {
       numbers.querySelectorAll("button")[j].classList.add("selected");
     } else {
-        numbers.querySelectorAll("button")[j].classList.remove("selected");
+      numbers.querySelectorAll("button")[j].classList.remove("selected");
     }
   }
   if (n == 5) {

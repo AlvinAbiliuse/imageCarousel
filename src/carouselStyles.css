@@ -51,10 +51,10 @@
     border: none;
     outline: none;
     background: white;
-		transition: width 0.2s ease;
+    transition: width 0.2s ease;
   }
   button.selected {
-		width: 20px;
+    width: 20px;
     background: gray;
   }
 }
