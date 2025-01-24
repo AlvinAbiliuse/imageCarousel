@@ -9,18 +9,18 @@ let data = {"Cats": cat, "Dogs": dog};
 let current = data["Cats"];
 
 function start(img) {
+	clearInterval(interval);
+	imageTimeout(img);
 	interval = setInterval(() => {
 		imageTimeout(img, n);
 	}, 5000);
 };
 
 document.querySelector(".dropDownItems").addEventListener(
-  "focus", (e) => {
+  "click", (e) => {
   if (e.target.nodeName == "BUTTON") {
 		n = 0;
 		current = data[e.target.textContent];
-    clearInterval(interval);
-		imageTimeout(current);
 		start(current);
 	document.querySelector(".dropDownItems").classList.toggle(
 		"show");
@@ -32,8 +32,6 @@ document.querySelector(".dropDownItems").addEventListener(
 numbers.addEventListener("click", (e) => {
 	if (e.target.nodeName == "BUTTON") {
 		n = Number(e.target.classList[0].replace("img", "")) - 1;
-		clearInterval(interval);
-		imageTimeout(current);
 		start(current);
 	}
 });
@@ -48,8 +46,6 @@ document.querySelector(".left").addEventListener("click",
 		} else {
 			n = n - 2;
 		};
-		clearInterval(interval);
-		imageTimeout(current);
 		start(current);
 });
 
@@ -60,8 +56,6 @@ document.querySelector(".right").addEventListener("click",
 		} else {
 			n = n++;
 		};
-		clearInterval(interval);
-		imageTimeout(current);
 		start(current);
 });
 
@@ -87,7 +81,6 @@ const imageTimeout = (i) => {
 };
 
 export function carousel() {
-		imageTimeout(current);
 		start(current);
 };
 
