@@ -15,19 +15,19 @@
 
   .left,
   .right {
-		user-select: none;
+    user-select: none;
     background: none;
     position: absolute;
     top: calc(50% - 30px);
-		padding: 20px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     font-weight: 1000;
-		color: white;
-		border-radius: 10px;
-		text-shadow: 0 0 10px gray;
+    color: white;
+    border-radius: 10px;
+    text-shadow: 0 0 10px gray;
   }
 
   .left {
@@ -41,8 +41,8 @@
   .left:hover,
   .right:hover {
     cursor: pointer;
-		background: rgb(0 0 0 / 20%);
-		text-shadow: none;
+    background: rgb(0 0 0 / 20%);
+    text-shadow: none;
   }
 }
 
