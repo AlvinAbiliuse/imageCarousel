@@ -15,13 +15,15 @@ function start(img) {
 };
 
 document.querySelector(".dropDownItems").addEventListener(
-  "click", (e) => {
+  "focus", (e) => {
   if (e.target.nodeName == "BUTTON") {
 		n = 0;
 		current = data[e.target.textContent];
     clearInterval(interval);
 		imageTimeout(current);
-		start(current);;
+		start(current);
+	document.querySelector(".dropDownItems").classList.toggle(
+		"show");
   }
 });
 
@@ -38,7 +40,6 @@ numbers.addEventListener("click", (e) => {
 
 document.querySelector(".left").addEventListener("click", 
 		() => {
-		console.log(n);
 		
 		if (n == 0) {
 			n = 4;
@@ -74,17 +75,15 @@ const imageTimeout = (i) => {
 			try {
 				numbers.querySelectorAll("button")[j].classList.remove("selected");
 			} catch (e) {
-				console.log(e);
+				
 			}
 		}
 	};
-	console.log(n);
 	if (n == 5) {
 		n = 0;
 	} else {
 		n++;
 	};
-	console.log(n + "\n\n");
 };
 
 export function carousel() {
