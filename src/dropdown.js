@@ -1,12 +1,16 @@
-function dropdownToggle() {
-	document.querySelector(".dropDown ul").classList.toggle(
-		"show");
+let path = document.querySelector(".dropDown ul");
+
+function toggle() {
+	path.classList.toggle("show");
 }
 
 
 export function dropdown() {
 	let dropDownBtn = document.querySelector(".dropDownButton");
-	dropDownBtn.addEventListener("click", dropdownToggle);
+	dropDownBtn.addEventListener("click", toggle);
+	dropDownBtn.addEventListener("focusout", () => {
+		path.classList.remove("show")
+	});
 };
 
 
