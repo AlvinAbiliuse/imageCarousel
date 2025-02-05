@@ -15,6 +15,7 @@
 
 	.left,
 	.right {
+		-webkit-tap-highlight-color: transparent;
 		user-select: none;
 		background: none;
 		position: absolute;
@@ -47,6 +48,7 @@
 }
 
 .number {
+	-webkit-tap-highlight-color: transparent;
 	button {
 		margin: 15px 5px;
 		width: 10px;
