@@ -1,39 +1,40 @@
 button:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .dropDown {
-  width: 150px;
-  margin: 0 auto;
-  ul {
-    transform: scale(1, 0);
-    position: absolute;
-    transition: transform 0.2s ease;
-    transform-origin: top;
-    z-index: 1;
-  }
-  ul.show {
-    transform: scale(1, 1);
-  }
-  ul button {
-    background: lightgray;
-    border: 1px solid lightgray;
-    border-top-color: gray;
-  }
-  li {
-    list-style: none;
-    width: 150px;
-  }
-  button {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid black;
-  }
-  .dropDownButton {
-    background: gray;
-    margin-bottom: 5px;
-    color: white;
-    border: none;
-    border-radius: 10px;
-  }
+	-webkit-tap-highlight-color: transparent;
+	width: 150px;
+	margin: 0 auto;
+	ul {
+		transform: scale(1, 0);
+		position: absolute;
+		transition: transform 0.2s ease;
+		transform-origin: top;
+		z-index: 1;
+	}
+	ul.show {
+		transform: scale(1, 1);
+	}
+	ul button {
+		background: lightgray;
+		border: 1px solid lightgray;
+		border-top-color: gray;
+	}
+	li {
+		list-style: none;
+		width: 150px;
+	}
+	button {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid black;
+	}
+	.dropDownButton {
+		background: gray;
+		margin-bottom: 5px;
+		color: white;
+		border: none;
+		border-radius: 10px;
+	}
 }
