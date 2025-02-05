@@ -2,16 +2,15 @@
 	position: relative;
 	overflow: hidden;
 	max-width: 600px;
-	height: 10%;
-	max-height: 400px;
+	aspect-ratio: 3/2;
 	margin: 40px auto;
 	border-radius: 10px;
 	margin-bottom: 0;
 
 	img {
-		object-fit: auto;
-		width: 600px;
-		height: 400px;
+		object-fit: contain;
+		width: 100%;
+		height: auto;
 	}
 
 	.left,
