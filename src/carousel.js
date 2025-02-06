@@ -1,12 +1,13 @@
-import { cat, dog } from "./exports.js";
+import { cat, dog, catw300, dogw300 } from "./exports.js";
 // import { catMobile, dogMobile } from "./exports.js";
 const numbers = document.querySelector(".number");
 
 let n = 0;
 let interval;
 
-let data = { Cats: cat, Dogs: dog };
+let data = { Cats: cat, Dogs: dog, cat300: catw300, dog300: dogw300 };
 let current = data["Cats"];
+let currentSmol = data["cat300"];
 
 function start(img) {
 	clearInterval(interval);
@@ -20,6 +21,11 @@ document.querySelector(".dropDownItems").addEventListener("click", (e) => {
 	if (e.target.nodeName == "BUTTON") {
 		n = 0;
 		current = data[e.target.textContent];
+		if ((e.target.textContent = "Cats")) {
+			currentSmol = data["cat300"];
+		} else {
+			currentSmol = data["dog300"];
+		}
 		start(current);
 		document.querySelector(".dropDownItems").classList.toggle("show");
 	}
@@ -54,7 +60,8 @@ document.querySelector(".right").addEventListener("click", () => {
 
 const imageTimeout = (i) => {
 	let img = document.querySelector(".imageCarousel img");
-	img.setAttribute("src", i[n]);
+	img.setAttribute("srcset", `${i[n]} 600w, ${currentSmol[n]} 300w`);
+	img.setAttribute("sizes", "(max-width: 600px) 300px, 600px");
 	for (let j = 0; j < 6; j++) {
 		if (j == n) {
 			numbers.querySelectorAll("button")[j].classList.add("selected");
