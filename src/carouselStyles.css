@@ -6,6 +6,7 @@
 	margin: 40px auto;
 	border-radius: 10px;
 	margin-bottom: 0;
+	background-position: center;
 
 	img {
 		object-fit: contain;
