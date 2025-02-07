@@ -60,8 +60,9 @@ document.querySelector(".right").addEventListener("click", () => {
 
 const imageTimeout = (i) => {
 	let img = document.querySelector(".imageCarousel img");
-	img.setAttribute("srcset", `${i[n]} 600w, ${currentSmol[n]} 300w`);
-	img.setAttribute("sizes", "(max-width: 600px) 300px, 600px");
+	console.log(`${i[n]} 600w, ${currentSmol[n]} 300w`);
+	img.setAttribute("srcset", `${currentSmol[n]} 300w,	${i[n]} 600w`);
+	img.setAttribute("sizes", "(max-width: 200px) 300px, 600px");
 	for (let j = 0; j < 6; j++) {
 		if (j == n) {
 			numbers.querySelectorAll("button")[j].classList.add("selected");
